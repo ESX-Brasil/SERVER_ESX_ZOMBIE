@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css?family=Muli:700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/b5b3392b53.js" crossorigin="anonymous"></script>
+  <title></title>
+</head>
+
+<body>
+  <audio id="loading" autoplay loop>
+    <source src="music/loading.mp3" type="audio/mp3"></audio>
+      
+  <div class="bg-wrapper">
+    <div class="bg-img active"></div>
+  </div>
+  <div class="box-wrapper">
+    <div class="box-gauche">
+    </div>
+
+    <div class="box-droite">
+      <div class="box-gauche-infos">
+        <img class="img-header" src="img/logo.png" height="200" width="200"></img>
+        <h1 class="name"><span class="color-title">Quem ousa vence</span></h1>
+        <div class="separator1"></div>
+        <h3 class="name"><i class="fas fa-users" style="color: red;"></i> 128</h3>
+        <div class="separator1"></div>
+        <h3 class="name"><i class="fas fa-gamepad" style="color: red;"></i> Survival</span></h3>
+        <div class="separator1"></div>
+        <h3 class="name"><i class="fab fa-discord" style="color: red;"></i> WZHyW2b</span></h3>
+        <div class="separator1"></div>
+        <h3 class="name"><i class="fas fa-globe-americas" style="color: red;"></i> esxbrasil.host</span></h3>
+        <div class="separator1"></div>
+        <span class="rgb-right"></span>
+    </div>
+  </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+  <script src="./script.js"></script>
+
+  <script>
+    var play = false;
+            var vid = document.getElementById("loading");
+            vid.volume = 0.3;
+            window.addEventListener('keyup', function(e)
+            {
+                if (e.which == 69){
+                    vid.volume = Math.min(vid.volume + 0.1,1);
+                } else if(e.which == 65){
+                    vid.volume = Math.max(vid.volume - 0.1,0);
+                };
+            });
+  </script>
+</body>
+
+</html>
